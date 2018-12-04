@@ -1,0 +1,31 @@
+{
+  "name": "roadmap",
+  "version": "1.0.0",
+  "description": "first app",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon httpServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timeab/roadmap.git"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Timea B.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timeab/roadmap/issues"
+  },
+  "homepage": "https://github.com/timeab/roadmap#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
