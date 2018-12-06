@@ -1,13 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const con = require('../mySqlConnection');
+
 //Home
-router.get('/', async (req, res, next) => {
-    const result = await con.getProductRow();
+router.get('/', (req, res, next) => {
     res.status(200).type("text/plain");
-    res.send(result);
+    res.write('Hello World!');
     res.end();
 });
-// const test = new doConnection();
 
 module.exports = router;

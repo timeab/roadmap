@@ -1,9 +1,6 @@
 require('dotenv').config();
-const http = require('http');
-const app = require('./app');
 const mysql = require('mysql');
 const dbProp = require('./config');
-const router = require('./api/home');
 
 class doConnection {
     constructor() {
