@@ -1,11 +1,17 @@
 const express = require('express');
-const home = require('./api/home');
-const notFound = require('./api/404');
-const product = require('./api/product');
 const app = express();
+const pathHandler = require('./handlers/pathHandler');
 
-app.use('/', home);
-app.use('/product', product);
-app.use('*', notFound);
+
+pathHandler().then(path =>
+    path.forEach((elem) => {
+        const comp = require(`./api/${elem}`);
+        if (comp.path === '*') {
+            setTimeout(() => app.use(comp.path, comp.handler));
+        } else {
+            app.use(comp.path, comp.handler);
+        }
+
+    }));
 
 module.exports = app;

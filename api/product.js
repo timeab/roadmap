@@ -8,4 +8,4 @@ router.get('/', async (req, res, next) => {
     res.send(result);
     res.end();
 });
-module.exports = router;
+module.exports = { path: '/product', handler: router };
