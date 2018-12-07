@@ -7,5 +7,4 @@ router.get('/', (req, res, next) => {
     res.write('Hello World!');
     res.end();
 });
-
-module.exports = router;
+module.exports = { path: '/', handler: router };
