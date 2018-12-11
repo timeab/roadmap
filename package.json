@@ -24,7 +24,8 @@
   "homepage": "https://github.com/timeab/roadmap#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "mysql": "^8.0.13"
+    "mysql": "^8.0.13",
+    "superagent": "^4.0.0"
   },
   "devDependencies": {
     "dotenv": "^6.1.0",
