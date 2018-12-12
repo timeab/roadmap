@@ -7,7 +7,7 @@ class Button extends React.Component {
     }
     render() {
         return (
-            <button id='button' onClick={this.addToCart}>
+            <button className='btn' id='button' onClick={this.addToCart}>
                 Add to cart
             </button>
         );
