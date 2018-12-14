@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from '../buttons/button';
 import './card.css';
-
-const product = 'http://localhost:8080/product';
+import config from '../../config';
 
 //Create a card component for products, should include Title, description, price,
+console.log(config, 'aici');
 // add to cart button
 class Card extends React.Component {
 
@@ -17,9 +17,9 @@ class Card extends React.Component {
     }
 
     componentDidMount() {
-        fetch(product)
+        fetch(`${config.BACKEND}/product`)
             .then(response => response.json())
-            .then(json => 
+            .then(json =>
                 this.setState({
                     isLoaded: true,
                     items: json,
@@ -41,12 +41,10 @@ class Card extends React.Component {
                                     <h1 className='name'>  Name: {item.name} </h1>
                                     <h2 className='price'> Price:{item.price} </h2>
                                     <h3 className='description'> Description:{item.description}</h3>
+                                    <h4 className='addToCart'><Button /></h4>
                                 </li>
                             )
                             }
-                            <div className='addToCart'>
-                                <Button />
-                            </div>
                         </ul>
                     }
                 </div >

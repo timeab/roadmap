@@ -4,5 +4,5 @@ const dbProp = {
     password: process.env.DB_PASSWORD,
     database: process.env.DATABASE,
     port: process.env.DB_PORT,
-}
+};
 module.exports = dbProp;

@@ -1,5 +1,6 @@
 import React from 'react';
 import './button.css';
+import MaterialButton from '@material-ui/core/Button';
 
 class Button extends React.Component {
     addToCart() {
@@ -7,9 +8,9 @@ class Button extends React.Component {
     }
     render() {
         return (
-            <button className='btn' id='button' onClick={this.addToCart}>
+            <MaterialButton variant="contained" className='btn' id='button' onClick={this.addToCart}>
                 Add to cart
-            </button>
+            </MaterialButton>
         );
     }
 }
