@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Card from './components/card/card'
+import CardList from './components/card/cardList'
 import Categories from './components/categories/categories';
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
         {
           <ul>
             <h1><Categories /></h1>
-            <h2> <Card /></h2>
+            <h2><CardList /></h2>
           </ul>
         }
       </div>
