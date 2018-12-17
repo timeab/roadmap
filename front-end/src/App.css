@@ -14,8 +14,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 5px;
   color: white;
+}
+
+.card{
+font-size: 15px;
+}
+
+.name{
+  font-size:18px;
+}
+
+.checkBox{
+  font-size:17px;
+
 }
 
 .App-link {

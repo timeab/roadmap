@@ -1,23 +1,19 @@
 import React from 'react';
-import Button from '../buttons/button';
 import './card.css';
+import Button from '../buttons/button';
 
 //Create a card component for products, should include Title, description, price,
 // add to cart button
-class Card extends React.Component {
-    render() {
-        return (
-            <div className='card'>
-                <h1 className='title'>Title</h1>
-                <h1 id='description'>Description</h1>
-                <h1 id='price'>Price</h1>
-                <div className='addToCart'>
-                    <Button />
-                </div>
-            </div >
+const Card = (props) => {
+    return (
 
-        );
-    }
+        <li className='card'>
+            <p className='name'>  Name: {props.name} </p>
+            <p className='price'> Price:{props.price} </p>
+            <p className='description'> Description:{props.description}</p>
+            <Button />
+        </li>
+    )
 }
 
 export default Card;

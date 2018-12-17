@@ -12,10 +12,4 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-  .addToCart{
-    text-align: center;
-  }
-  .btn{
-    padding: 20px;
-    font-size: 20px;
-  }
+  

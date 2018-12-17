@@ -23,12 +23,16 @@
   },
   "homepage": "https://github.com/timeab/roadmap#readme",
   "dependencies": {
+    "content-type": "^1.0.4",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
-    "mysql": "^8.0.13",
+    "material-ui": "^0.20.2",
+    "mysql": "^2.16.0",
     "superagent": "^4.0.0"
   },
   "devDependencies": {
     "dotenv": "^6.1.0",
     "nodemon": "^1.18.7"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
