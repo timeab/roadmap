@@ -18,10 +18,9 @@ class Categories extends React.Component {
         });
     }
     render() {
-        console.log(this.state);
         return (
             <form>
-                <label>
+                <label className='checkBox'>
                     Check categorie:
 
                 <input

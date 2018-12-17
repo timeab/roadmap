@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../buttons/button';
 import './card.css';
 import config from '../../config';
 import Card from '../card/card';
