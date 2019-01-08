@@ -6,7 +6,6 @@ class Categories extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: [],
             checked: false,
         };
         this.handleInputChange = this.handleInputChange.bind(this);
