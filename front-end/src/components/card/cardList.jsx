@@ -17,13 +17,28 @@ class CardList extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`${config.BACKEND}/product`)
+        this.getProducts();
+    }
+    componentDidUpdate(prevProps) {
+        if (prevProps.selectedCategory !== this.props.selectedCategory) {
+            this.getProducts();
+        }
+    }
+
+    getProducts() {
+        const isCategoryID = Boolean(this.props.selectedCategory);
+        let route = '/product';
+        if (isCategoryID) {
+            route = `/productCategory?catId=${this.props.selectedCategory}`;
+        }
+        fetch(`${config.BACKEND}${route}`)
             .then(response => response.json())
-            .then(json =>
+            .then(json => {
                 this.setState({
                     isLoaded: true,
                     items: json,
-                }));
+                });
+            });
     }
 
     render() {
@@ -33,10 +48,12 @@ class CardList extends React.Component {
         }
         else {
             return (<div className='cardList'>
-                <ul>{this.state.items.map(card =>
-                    <Card key={card.id} id={card.id} name={card.name} price={card.price} description={card.description} />
-
-                )}
+                <ul>
+                    {
+                        items.map(card =>
+                            <Card key={card.id} id={card.id} name={card.name} price={card.price} description={card.description} />
+                        )
+                    }
                 </ul>
             </div >)
         }
