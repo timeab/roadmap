@@ -1,4 +1,3 @@
-
 import commonSelectors from './selectors/commonSelectors';
 import descriptionContent from './selectors/descriptionContent';
 
@@ -6,15 +5,12 @@ const commonSelector = new commonSelectors;
 const categoryDescriptionItems = { Kids: 1, Home: 5, Auto: 5, Food: 1 };
 
 fixture`Testing product app`// declare the fixture
-    .page`http://localhost:3000/`;  // specify the start page
+    .page`http://localhost:3000/`;
 
-
-//then create a test and place your code there
 test('Check description from the first selected option', async t => {
     await t
         .click(commonSelector.getAllCheckBoxes().nth(0))
         .expect(Boolean(commonSelector.getAllCheckBoxes().nth(0).child().value)).eql(true)
-        // Use the assertion to check if the actual header text is equal to the expected one
         .expect(commonSelector.getText().textContent).eql(descriptionContent.description_kids);
 });
 test('Check addToCart functionality', async t => {
