@@ -1,6 +1,5 @@
-require('dotenv').config();
 const mysql = require('mysql');
-const dbProp = require('./config');
+const { dbProp } = require('./config');
 
 class doConnection {
     constructor() {
