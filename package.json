@@ -4,8 +4,8 @@
   "description": "first app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "test": "testcafe chrome e2e/firstTest.js  --testDomain",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,8 @@
   },
   "devDependencies": {
     "dotenv": "^6.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "testcafe": "^0.23.3"
   },
   "proxy": "http://localhost:8080"
 }
