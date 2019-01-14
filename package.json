@@ -4,7 +4,7 @@
   "description": "first app",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome e2e/firstTest.js  --testDomain",
+    "test": "node e2e/main/runner.js --testDomain",
     "start": "node index.js"
   },
   "repository": {
