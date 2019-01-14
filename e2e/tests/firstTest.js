@@ -1,12 +1,11 @@
-import commonSelectors from './selectors/commonSelectors';
-import { testConfig } from '../config';
-import descriptionContent from './descriptionContent'
+import commonSelectors from '../selectors/commonSelectors';
+import { testConfig } from '../../config';
+import descriptionContent from '../utility/descriptionContent'
 
 const commonSelector = new commonSelectors;
 const categoryDescriptionItems = { Kids: 1, Home: 5, Auto: 5, Food: 1 };
 const getCategoryItems = option => commonSelector.getAllCheckBoxes().withText(option);
 const getAllItemsState = Boolean(commonSelector.getAllCheckBoxes().nth(0).child().value);
-
 
 fixture`Testing product app`// declare the fixture
     .page(testConfig.domain);
